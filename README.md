@@ -1,34 +1,37 @@
-# Dossier Homebrew Tap
+# Kyle Begeman Homebrew Tap
 
-Homebrew formulae for [Dossier](https://github.com/mrbagels/dossier), a CLI
-for generating self-contained, agent-readable HTML dossiers from structured JSON
-models.
+Homebrew formulae for Kyle Begeman developer tools.
 
 ## Install
 
 ```bash
-brew tap mrbagels/tap
+brew tap kylebegeman/tap
+brew install ledger
 brew install dossier
+ledger version
 dossier --help
 ```
 
 You can also install without tapping first:
 
 ```bash
-brew install mrbagels/tap/dossier
+brew install kylebegeman/tap/ledger
+brew install kylebegeman/tap/dossier
 ```
 
 ## Upgrade
 
 ```bash
 brew update
+brew upgrade ledger
 brew upgrade dossier
 ```
 
 ## Brewfile
 
 ```ruby
-tap "mrbagels/tap"
+tap "kylebegeman/tap"
+brew "ledger"
 brew "dossier"
 ```
 
@@ -36,7 +39,8 @@ brew "dossier"
 
 | Formula | Description |
 |---|---|
+| `ledger` | Repo-native change memory for humans and coding agents. |
 | `dossier` | Generate self-contained, agent-readable HTML dossiers. |
 
-The formula builds from the tagged GitHub source release and installs the
-`dossier` executable with Homebrew's Node packaging helper.
+The formulae install Node-based CLI tools with Homebrew's Node packaging helper
+or the package manager's published release artifact.
